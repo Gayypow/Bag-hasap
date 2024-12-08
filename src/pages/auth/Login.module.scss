@@ -1,0 +1,119 @@
+$small: 768px;
+$medium: 1024px;
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  .leftSide,
+  .rightSide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 240px;
+    @media screen and (max-width: $medium) {
+      width: 100%;
+    }
+    .languageBar {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    .authForm {
+      width: 40%;
+      min-width: 240px;
+      max-width: 500px;
+      .scanQrGroup {
+        display: none;
+      }
+      .logo {
+        width: 200px;
+        height: 90px;
+        border-radius: 5px;
+      }
+      .checkboxRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 4%;
+        @media screen and (min-width: 1019px) and (max-width: 1300px) {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          a {
+            font-size: 13px;
+          }
+          label {
+            font-size: 12px;
+          }
+        }
+        @media screen and (max-width: $small) {
+          a {
+            font-size: 12px;
+          }
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+      @media screen and (max-width: $medium) {
+        width: 50%;
+        .scanQrGroup {
+          display: block;
+        }
+      }
+    }
+  }
+  .rightSide {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .scanQrGroup {
+      display: none;
+    }
+    @media screen and (max-width: $medium) {
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      transition: 0.2s ease-in-out;
+      .scanQrGroup {
+        display: block;
+      }
+    }
+    .imageOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, #010050ba, #000000cc);
+      .QR {
+        margin: 20px;
+        padding: 12px;
+      }
+    }
+    .textColorWhite {
+      width: 100%;
+      margin-top: 0;
+      padding: 0 8%;
+      color: #ddd;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: $medium) {
+    .rightSide.open {
+      bottom: 0;
+    }
+  }
+}

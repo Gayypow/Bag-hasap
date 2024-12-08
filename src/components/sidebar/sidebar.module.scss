@@ -1,0 +1,79 @@
+.sidebar {
+  position: fixed !important;
+  z-index: 2;
+  z-index: 50;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  // overflow: auto;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+  // background-color: #fff !important;
+  .sidebar-user-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10;
+    color: #002453;
+    font-size: 16px;
+  }
+}
+.menu-section {
+  height: calc(87.5dvh);
+  overflow: auto;
+  border-inline-end: none !important;
+  svg {
+    font-size: 20px;
+  }
+}
+.menu_footer {
+  border-inline-end: none !important;
+}
+.sidebar-logo-open-control {
+  position: sticky;
+  display: flex;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 17px 0 11px;
+}
+.sidebar-userInfo {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  width: 275px;
+  height: fit-content;
+  padding: 16px 20px 5px;
+  // background: #1f1f1f;
+}
+.sidebar-search-input {
+  height: 35px;
+  margin: 8px auto 10px;
+  padding: 0 3px;
+  color: #002453;
+  font-size: 14px;
+}
+.version-and-download {
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  // margin-top: -42px;
+  padding: 10px;
+  padding-top: 0;
+  color: #676767;
+  .install-version {
+    float: right;
+    .install-button {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
